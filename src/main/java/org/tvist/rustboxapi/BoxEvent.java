@@ -74,14 +74,6 @@ public class BoxEvent implements Listener {
     }
 
     @EventHandler
-    public void join(PlayerJoinEvent event){
-        BoxManager.createBox(
-                event.getPlayer().getLocation(),
-                "Box", 9, 20*30,
-                new ArrayList<>(){{add(new ItemStack(Material.PAPER));}});
-    }
-
-    @EventHandler
     public void load(EntitiesLoadEvent event){
         List<ArmorStand> armorStands = event.getEntities().stream().filter(entity -> entity.getType() == EntityType.ARMOR_STAND).map(entity -> ((ArmorStand)entity)).toList();
 
