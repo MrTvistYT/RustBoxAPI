@@ -71,6 +71,7 @@ public class BoxEvent implements Listener {
 
         as.getPersistentDataContainer().set(RustBoxAPI.BOX_CONTENT, DataType.ITEM_STACK_ARRAY, event.getInventory().getContents());
         as.getPersistentDataContainer().set(RustBoxAPI.BOX_OPENED, DataType.BOOLEAN, false);
+
     }
 
     @EventHandler
